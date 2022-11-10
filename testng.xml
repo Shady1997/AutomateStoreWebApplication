@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- to run test sequentially change thread count from 2 to 1 and enable
+	firefox -->
+<suite name="MYStore Web Application" parallel="tests" thread-count="1" verbose="2">
+    <listeners>
+        <listener class-name="org.example.reports.MyListener" />
+    </listeners>
+    <test name="Test Home Page">
+        <parameter name="browser" value="Chrome" />
+        <classes>
+            <class name="org.example.test_cases.TestBase" />
+        </classes>
+    </test>
+    <test name="Test Home Page">
+        <parameter name="browser" value="Chrome" />
+        <classes>
+            <class name="org.example.test_cases.TestBase" />
+        </classes>
+    </test>
+    <!--<test name="TestFirefox"> <parameter name="browser" value="Firefox"
+        /> <classes> <class name="main.Start" /> </classes> </test> -->
+</suite>
